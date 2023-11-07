@@ -33,7 +33,7 @@ export async function createInvoice(formData: FormData) {
 	redirect("/dashboard/invoices");
 }
 
-const UpdateInvoice = InvoiceSchema.omit({ date: true });
+const UpdateInvoice = InvoiceSchema.omit({ date: true, id: true });
 
 export async function updateInvoice(id: string, formData: FormData) {
 	const { customerId, amount, status } = UpdateInvoice.parse({
@@ -45,10 +45,10 @@ export async function updateInvoice(id: string, formData: FormData) {
 
 	await sql`
 		UPDATE invoices
-		SET customer_id = ${customerId}, amount = ${amount}, status = ${status}
+		SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
 		WHERE id = ${id}
 	`;
 
 	revalidatePath("/dashboard/invoices");
-	redirect("dashboard/invoices");
+	redirect("/dashboard/invoices");
 }
