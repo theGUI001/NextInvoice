@@ -25,7 +25,7 @@ To use NextInvoice, you need to have Node.js (version 18 or higher) and npm (ver
  AUTH_SECRET=
  AUTH_URL=
  ```
- 
+
 4. Install the project dependencies using the command `npm install`.
 5. Start the development server using the command `npm run dev`.
 6. Open your browser and access the address `http://localhost:3000` to see NextInvoice in action.
@@ -35,7 +35,7 @@ To use NextInvoice, you need to have Node.js (version 18 or higher) and npm (ver
 NextInvoice offers the following features:
 
 - Tracking of invoices by status, such as pending, paid, overdue and canceled.
-- Generation of financial reports by period, client, category or status.
+- Generation of financial reports.
 
 ## Contribution
 
