@@ -6,6 +6,7 @@ import {
 	ClockIcon,
 	CurrencyDollarIcon,
 	UserCircleIcon,
+	XMarkIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { Button } from '@/app/ui/button'
@@ -132,6 +133,38 @@ export default function EditInvoiceForm({
 									className="ml-2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1.5 text-xs font-medium text-white dark:text-gray-300"
 								>
 									Paid <CheckIcon className="h-4 w-4" />
+								</label>
+							</div>
+							<div className="flex items-center">
+								<input
+									id="overdue"
+									name="status"
+									type="radio"
+									value="overdue"
+									defaultChecked={invoice.status === 'overdue'}
+									className="h-4 w-4 border-gray-300 bg-gray-100 text-gray-600 focus:ring-2 focus:ring-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-gray-600"
+								/>
+								<label
+									htmlFor="overdue"
+									className="ml-2 flex items-center gap-1.5 rounded-full bg-orange-400 px-3 py-1.5 text-xs font-medium text-white dark:text-gray-300"
+								>
+									Overdue <ClockIcon className="h-4 w-4" />
+								</label>
+							</div>
+							<div className="flex items-center">
+								<input
+									id="canceled"
+									name="status"
+									type="radio"
+									value="canceled"
+									defaultChecked={invoice.status === 'canceled'}
+									className="h-4 w-4 border-gray-300 bg-gray-100 text-gray-600 focus:ring-2 focus:ring-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-gray-600"
+								/>
+								<label
+									htmlFor="canceled"
+									className="ml-2 flex items-center gap-1.5 rounded-full bg-red-500 px-3 py-1.5 text-xs font-medium text-white dark:text-gray-300"
+								>
+									Canceled <XMarkIcon className="h-4 w-4" />
 								</label>
 							</div>
 						</div>
