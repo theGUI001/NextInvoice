@@ -2,7 +2,7 @@
 
 NextInvoice is a system of invoices that allows you to track and manage your invoices in an easy and fast way. You can use NextInvoice to see the status of your invoices, generate financial reports and more.
 
-NextInvoice is built with nextjs 14, a React framework that offers features like hybrid rendering, dynamic routing, pre-rendering and performance optimization. The start of the project was based on the Next.js Learn project from the official nextjs website.
+NextInvoice is built with Next.js 14, a React framework that offers features like hybrid rendering, dynamic routing, pre-rendering and performance optimization. The start of the project was based on the Next.js Learn project from the official Next.js website.
 
 ## How to use
 
