@@ -10,9 +10,25 @@ To use NextInvoice, you need to have Node.js (version 18 or higher) and npm (ver
 
 1. Clone the github repository to your computer using the command `git clone https://github.com/theGUI001/NextInvoice`.
 2. Enter the project folder using the command `cd nextinvoice`.
-3. Install the project dependencies using the command `npm install`.
-4. Start the development server using the command `npm run dev`.
-5. Open your browser and access the address `http://localhost:3000` to see NextInvoice in action.
+3. Create a .env file in the following pattern:
+
+ ```env
+ POSTGRES_URL=""
+ POSTGRES_PRISMA_URL=""
+ POSTGRES_URL_NON_POOLING=""
+ POSTGRES_USER=""
+ POSTGRES_HOST=""
+ POSTGRES_PASSWORD=""
+ POSTGRES_DATABASE=""
+
+ # To generate AUTH_SECRET use the following command `openssl rand -base64 32
+ AUTH_SECRET=
+ AUTH_URL=
+ ```
+ 
+4. Install the project dependencies using the command `npm install`.
+5. Start the development server using the command `npm run dev`.
+6. Open your browser and access the address `http://localhost:3000` to see NextInvoice in action.
 
 ## Features
 
